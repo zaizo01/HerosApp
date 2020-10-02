@@ -10,11 +10,11 @@ export const HeroCard = ({
 }) => {
     return (
         
-        <div className="flex max-w-md bg-white shadow-lg border rounded-lg overflow-hidden m-6">
+        <div className="flex flex-wrap max-w-md bg-white shadow-lg border rounded-lg overflow-hidden m-6">
             <div className="w-1/3 bg-cover">
                 <img src={ `./assets/heroes/${ id }.jpg` } alt={ superhero }/>
             </div>
-            <div className="w-2/3 p-6">
+            <div className="w-2/3 p-6 my-auto">
                 <h3 className="text-2xl font-semibold">{superhero}</h3>
                 <p>{ alter_ego }</p>
                 {
