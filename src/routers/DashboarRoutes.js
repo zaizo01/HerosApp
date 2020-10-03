@@ -3,6 +3,7 @@ import { MarvelPage } from '../components/Marvel/MarvelPage';
 import { Navbar } from '../components/UI/Navbar';
 import { DcPage } from '../components/DC/DcPage';
 import { HerosPage } from '../components/Heros/HerosPage';
+import { SearchPage } from '../components/search/SearchPage';
 
 import {
     BrowserRouter as Router,
@@ -15,11 +16,12 @@ export const DashboarRoutes = () => {
         <Fragment>
             <Navbar />
 
-                <div className="p-6 flex justify-center">
+                <div className="flex justify-center p-6">
                     <Switch>
                         <Route exact path='/MarvelPage'     component={ MarvelPage }/>
                         <Route exact path='/DCPage'         component={ DcPage }/>
-                        <Route exact path='/hero/:heroeId' component={ HerosPage }/>
+                        <Route exact path='/SearchPage'     component={ SearchPage }/>
+                        <Route exact path='/hero/:heroeId'  component={ HerosPage }/>
 
                         <Redirect to='/MarvelPage' />
                     </Switch>

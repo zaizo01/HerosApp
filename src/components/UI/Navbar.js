@@ -3,8 +3,8 @@ import { Link, NavLink } from 'react-router-dom';
   
 export const Navbar = () => {
     return (
-      <header className="bg-gray-900 text-xl text-white font-semibold shadow-sm">
-              <nav className="py-4 px-4">
+      <header className="text-xl font-semibold text-white bg-gray-900 shadow-sm">
+              <nav className="px-4 py-4">
                   <div className="flex flex-row justify-between">
                       <div>
                           <Link to="/" className="mr-4">Asocionaciones</Link>
@@ -21,6 +21,13 @@ export const Navbar = () => {
                             className="mr-4"
                             >
                             DC
+                            </NavLink>
+
+                            <NavLink
+                            to="/SearchPage"
+                            className="mr-4"
+                            >
+                            Search
                             </NavLink>
                       </div>
 
