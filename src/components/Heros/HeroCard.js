@@ -10,7 +10,7 @@ export const HeroCard = ({
 }) => {
     return (
         
-        <div className="flex flex-wrap max-w-md bg-white shadow-lg border rounded-lg overflow-hidden m-6">
+        <div className="flex flex-wrap max-w-md m-6 overflow-hidden bg-white border rounded-lg shadow-lg">
             <div className="w-1/3 bg-cover">
                 <img src={ `./assets/heroes/${ id }.jpg` } alt={ superhero }/>
             </div>
@@ -23,7 +23,7 @@ export const HeroCard = ({
                 }
                 <p>{ first_appearance }</p>
                 <Link to={ `./hero/${ id }` }>
-                   <button className="bg-black hover:bg-gray-900 py-3 px-8 text-white font-semibold rounded-md mt-4"> More... </button>
+                   <button className="px-8 py-3 mt-4 font-semibold text-white bg-black rounded-md hover:bg-gray-900"> More... </button>
                 </Link>
             </div>
         </div>

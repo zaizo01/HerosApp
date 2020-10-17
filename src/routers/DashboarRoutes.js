@@ -16,7 +16,7 @@ export const DashboarRoutes = () => {
         <Fragment>
             <Navbar />
 
-                <div className="flex justify-center p-6">
+                <div className="flex items-center justify-center w-full h-full p-6">
                     <Switch>
                         <Route exact path='/MarvelPage'     component={ MarvelPage }/>
                         <Route exact path='/DCPage'         component={ DcPage }/>
