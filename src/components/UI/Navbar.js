@@ -1,7 +1,21 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom';
+import React, { useContext } from 'react'
+import { Link, NavLink, useHistory } from 'react-router-dom';
+import { AuthContext } from '../../auth/AuthContext';
+import { types } from '../../types/types';
+
   
 export const Navbar = () => {
+
+  const { user:{ name }, dispatch } = useContext(AuthContext);
+  const history = useHistory();
+
+  const handleLogout = () => {
+        history.replace('/LoginPage');
+        dispatch({
+          type: types.logout
+        });
+  }
+
     return (
       <header className="text-xl font-medium text-white bg-gray-900 shadow-sm text">
               <nav className="px-4 py-4">
@@ -31,13 +45,14 @@ export const Navbar = () => {
                             </NavLink>
                       </div>
 
-                        <div>
-                            <NavLink
-                            to="/LoginPage"
+                        <div className="flex">
+                            <p className="pr-4 text-xl">{ name }</p>
+                            <button
                             className="mr-4"
+                            onClick={ handleLogout }
                             >
-                            Login
-                            </NavLink>
+                            Logout
+                            </button>
                         </div>
                         
                   </div>
