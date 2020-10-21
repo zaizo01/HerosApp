@@ -10,7 +10,9 @@ export const Navbar = () => {
   const history = useHistory();
 
   const handleLogout = () => {
+    
         history.replace('/LoginPage');
+
         dispatch({
           type: types.logout
         });
