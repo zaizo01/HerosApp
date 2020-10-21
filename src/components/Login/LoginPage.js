@@ -8,6 +8,8 @@ export const LoginPage = ({ history }) => {
 
     const handleLogin = () => {
 
+        const lastPath = localStorage.getItem('lastPath') || '/';
+
         dispatch({
             type: types.login,
             payload: {
@@ -15,7 +17,7 @@ export const LoginPage = ({ history }) => {
             }
         });
         
-        history.replace('/');
+        history.replace( lastPath );
     }
 
     return (

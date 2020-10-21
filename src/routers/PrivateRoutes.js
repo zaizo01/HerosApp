@@ -8,6 +8,9 @@ export const PrivateRoutes = ({
     ...rest
 }) => {
 
+    localStorage.setItem('lastPath', rest.location.pathname);
+    console.log(rest.location.pathname);
+
     return (
         
         <Route { ...rest }
