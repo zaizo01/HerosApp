@@ -7,12 +7,14 @@ export const LoginPage = ({ history }) => {
     const { dispatch } = useContext( AuthContext );
 
     const handleLogin = () => {
+
         dispatch({
             type: types.login,
             payload: {
                 name: 'Zaiz'
             }
         });
+        
         history.replace('/');
     }
 
